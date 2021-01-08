@@ -1,0 +1,90 @@
+/* Bases */
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('Stuff/Background.png');
+}
+
+@media (max-width: 700px) {}
+
+
+.site-header,
+.site-content,
+.site-footer {
+    margin: auto;
+    width: 90vw;
+    max-width: 1200px;
+    border: 1px solid white;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    background: #fff;
+}
+.header-search {
+    margin-left: auto;
+}
+.header-brand {
+    max-width: 100px;
+    margin-right: 2em;
+}
+
+@media (min-width: 60rem) {
+    .header-content,
+    .header-nav .menu {
+        
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/** 
+ * Composants
+ * ============================================================ */
+
+/* Menu ------------------------------------------------------- */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu--maternite { 
+    --item--background-color: red;
+    --item--color: white; 
+}
+.menu--gynecologie { 
+    --item--background-color: blue; 
+}
+.menu--chirurgie { 
+    --item--background-color: green; 
+}
+
+.menu--item:hover {
+    background-color: var(--item--background-color);
+    color: var(--item--color);
+}
+.menu--link {
+    display: block;
+    padding: 1em .75em;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Portail --------------------------------------------------- */
+.portal {
+    padding-top: 180px;
+    margin-top: -140px;
+    height: 100vh;
+    background: rebeccapurple;
+}

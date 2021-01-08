@@ -1,0 +1,509 @@
+:root {
+    --color-orange: #f48228;
+    --color-purple: #c92184;
+    --color-green: #21c960;
+}
+
+/* Bases */
+* {
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url('Stuff/Background.png');
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url(Fonts/Montserrat/Montserrat-Bold.otf)
+}
+
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url(Fonts/Montserrat/Montserrat-Regular.otf)
+}
+
+.conteneurHeader {
+    margin-top: 40px;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    padding: 0;
+    margin: 0;
+    /*background-color : black;*/
+
+    width: 60%;
+    display: flex;
+
+    flex-direction: row;
+    align-items: center;
+}
+
+.conteneurLogo {
+    height: 100%;
+    width: 120px;
+    /*background-color: red;*/
+}
+
+.logoBelve {
+    height: 100%;
+}
+
+.conteneurTitres1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 20%;
+    background-color: white;
+}
+
+.conteneurTitres2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 20%;
+    background-color: white;
+}
+
+.conteneurTitres3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 20%;
+    background-color: white;
+}
+
+.conteneurRecherche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 30%;
+    /*background-color: green;*/
+    background-color: white;
+}
+
+.champRecherche {
+    background-color: rgb(233, 233, 233);
+    height: 60%;
+    width: 65%
+}
+
+.conteneurIcon {
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    height: 55%;
+    width: 50px;
+    /*background-color: blue;*/
+}
+
+.Loupe {
+    height: 100%;
+}
+
+h4 {
+    text-transform: uppercase;
+    /*color: white;*/
+    font-size: 1.2em;
+    font-family: sans-serif;
+}
+
+.conteneurTitres1:hover {
+    background-color: var(--color-orange);
+    color: white;
+}
+
+.conteneurTitres2:hover {
+    background-color: #c92184;
+    color: white;
+}
+
+.conteneurTitres3:hover {
+    background-color: #21c960;
+    color: white;
+}
+
+@media (max-width: 700px) {}
+
+
+.site-header,
+.site-content,
+.site-footer {
+    margin: auto;
+    width: 90vw;
+    max-width: 1200px;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    background: #fff;
+    border-radius: 1em;
+}
+.header-search {
+    margin-left: auto;
+    margin-right: 1em;
+}
+.header-brand {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    max-width: 100px;
+    margin-right: 2em;
+}
+
+@media (min-width: 60rem) {
+    .header-content,
+    .header-nav .menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+/** 
+ * Composants
+ * ============================================================ */
+
+/* Menu ------------------------------------------------------- */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu--item {
+    text-transform: uppercase;
+    font-family: "Montserrat Bold";
+}
+
+.menu--maternite { 
+    --item--background-color:var(--color-orange);
+    --item--color: white; 
+}
+.menu--gynecologie { 
+    --item--background-color:var(--color-purple);
+    --item--color: white; 
+}
+.menu--chirurgie { 
+    --item--background-color: var(--color-green);
+    --item--color: white; 
+}
+
+.menu--item:hover {
+    background-color: var(--item--background-color);
+    color: var(--item--color);
+}
+.menu--link {
+    display: block;
+    padding: 1em 1.8em;
+    color: inherit;
+    text-decoration: none;
+}
+
+.search-bar {
+    border: 2px white solid;
+    text-transform: ;
+}
+
+.search-button {
+    padding: .4em;
+    font-family: "Montserrat Regular";
+    border: 1px solid var(--color-orange);
+    border-radius: 5px;
+    color: white;
+    background-color: var(--color-orange);
+}
+
+/* Portail --------------------------------------------------- */
+.portal {
+    background-image: linear-gradient( to bottom, rgba(255, 179, 92, 0.6), rgba(255, 255, 255, 0));
+    margin: auto;
+    padding: 40px;
+    width: 90vw;
+    max-width: 1200px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+    display: grid;
+    grid-gap: 40px;
+}
+
+@media (min-width: 60rem) {
+    .portal {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.portal-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 -6px 0 var(--portal-item-color);
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+    flex-direction: column;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.portal-item--title {
+    margin: 0;
+    font-family: "Montserrat Bold";
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.portal-item--title small {
+    display: block;
+    font-size: 0.8em;
+}
+
+.portal-item--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient( to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 100%;
+}
+
+.portal-patient { --portal-item-color: var(--color-orange); }
+.portal-enceinte { --portal-item-color: var(--color-purple); }
+.portal-visiteur { --portal-item-color: var(--color-green); }
+
+.portal-item--icon {
+    border: 1px solid green;
+}
+
+/* Actualités --------------------------------------------------- */
+
+.actualites {
+    background-color: white;
+    width: 90vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+h2 {
+    font-family: "Montserrat Bold";
+    font-size: 2rem;
+}
+
+.actualite-separation {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background-color: var(--color-orange);
+    width:25%;
+    height: 2px;
+}
+
+.actualite-separateur {
+    width: 90vw;
+    max-width: 1118px;
+    height: 2px;
+    background-color: rgb(231, 231, 231);
+    margin-top: 10px;
+}
+
+.actualite-articles {
+    margin: auto;
+    padding: 40px;
+    width: 90vw;
+    max-width: 1200px;
+    display: grid;
+    grid-gap: 40px;
+}
+
+@media (min-width: 60rem) {
+    .actualite-articles {
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
+
+.actualite-articles-item {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    /*padding: 40px;*/
+    flex-direction: column;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    min-height: 200px;
+}
+
+.actualite-articles-titre {
+    font-family: "Montserrat Bold";
+    margin: 0;
+    color: white;
+}
+
+.actualite-articles-item-bandeau {
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.actualite-articles-item-espace-titre {
+    background-color: black;
+    min-height: 40px;
+    max-height: 40px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow: hidden;
+}
+
+.actualite-articles-texte {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: white;
+    padding-left: 5px;
+    font-family: "Montserrat Regular";
+    font-size: .8em;
+}
+
+.actualite-articles-item-espace-fleche {
+    background-color: var(--color-orange);
+    min-height: 40px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slider --------------------------------------------------- */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 1.5em;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat Bold";
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  font-family: "Montserrat Regular";
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: rgb(231, 231, 231);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: black;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
